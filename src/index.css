@@ -2,6 +2,11 @@ body {
   font-family: cursive;
 }
 
+h1 {
+  font-size: 4vw;
+  margin-left: 13vw;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -124,7 +129,7 @@ hr {
   margin: 0;
 }
 
-.nav h1 {
+.nav h2 {
   margin: 0;
   padding: 0;
 }
@@ -189,6 +194,7 @@ section {
 }
 
 main {
+  margin-top: -5vw;
   display: flex;
   justify-content: space-around;
 }

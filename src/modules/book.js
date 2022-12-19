@@ -34,17 +34,20 @@ class TitleAuthor {
     const book = document.getElementById('display_card');
     if (!storedTitleAuthor || storedTitleAuthor.length === 0) {
       book.innerHTML = `
-  <div>No Records</div>
+  <!-- <div>No Records</div> -->
+  <div class="card">
+  <p>${'Name'}: ${'95'}</p>
+  <p>${'Name'}: ${'96'}</p>
+  <p>${'Name'}: ${'97'}</p>
+  <p>${'Name'}: ${'98'}</p>
+  </div>
   `;
     } else {
       for (let i = 0; i < storedTitleAuthor.length; i += 1) {
         // const temp = i;
         book.innerHTML += `
                 <div id="card1" class="card">
-    <!-- <p>${storedTitleAuthor[i].Title}: ${storedTitleAuthor[i].Author}</p> -->
-    <p>${'Name'}: ${'95'}</p><br>
-   
- 
+    <p>${storedTitleAuthor[i].Title}: ${storedTitleAuthor[i].Author}</p>
     </div>
     `;
       }
