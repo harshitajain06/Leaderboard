@@ -15,9 +15,9 @@ const removeElements = document.querySelectorAll('.remove');
 removeElements.forEach((el) => {
   el.addEventListener('click', (e) => {
     const store = e.currentTarget.dataset;
-    const str = store.id;
+    const str1 = store.id;
 
-    show.remove(str);
+    show.remove(str1);
     window.location.reload();
   });
 });
