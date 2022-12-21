@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+<script defer src="main.js"></script></head>
+<body>
+    <main>
+    <!-- Books List -->
+    <Section class="sectionList">
+        
+            <h1>
+                Recent Scores
+                <button class="remove" data-id="${temp}">
+                    Remove
+                    </button>
+             </h1>
+             
+         <div class="displayWrap">
+             <div id="display_card" style="font-weight: bold;">
+             </div>
+         </div>
+        <hr>
+        
+        
+    </Section>
+
+    <!-- Add NEW Book -->
+
+    <section class="newBook">
+        <h2 style="margin-top: 80px; ">
+            Add Your Score
+         </h2>
+            <div>
+             <form class="form">
+                <input type="text" placeholder="your name" id="title" required>    
+                <input type="text" placeholder="your score" id="author" required>
+                <button id="submit_button"> Submit </button>
+            </form>
+            </div>
+    </section>
+
+</main>
+    <!-- Footer -->
+
+    <footer class="footer">
+        <p>Copyright @harshita jain</p>
+    </footer>
+    <script type="module" src="index.js"></script> 
+</body>
+</html>
