@@ -6,18 +6,27 @@ import TitleAuthor from './modules/book.js';
 const show = new TitleAuthor();
 show.showBook();
 
-const submit1 = document.querySelector('#submit_button');
+const refresh = document.querySelector('.refresh');
+const form1 = document.querySelector('#form');
+const title = document.getElementById('title');
+const author = document.getElementById('author');
 
-submit1.addEventListener('click', () => {
-  show.submit();
-});
-const removeElements = document.querySelectorAll('.remove');
-removeElements.forEach((el) => {
-  el.addEventListener('click', (e) => {
-    const store = e.currentTarget.dataset;
-    const str1 = store.id;
+form1.addEventListener('submit', async (e) => {
+  e.preventDefault();
 
-    show.remove(str1);
-    window.location.reload();
+  await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/jbTieK4n0oQxfEdI3QKa/scores/', {
+    method: 'POST',
+    body: JSON.stringify({
+      user: title.value,
+      score: author.value,
+    }),
+    headers: {
+      'Content-Type': 'application/json;charset=UTF-8',
+    },
   });
+  window.location.reload();
+});
+
+refresh.addEventListener('click', () => {
+  window.location.reload();
 });
