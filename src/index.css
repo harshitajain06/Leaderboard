@@ -1,10 +1,13 @@
 body {
   font-family: cursive;
+  background-color: #379237;
 }
 
 h1 {
   font-size: 4vw;
-  margin-left: 13vw;
+  margin-left: 40vw;
+  text-shadow: 5px 5px 5px rgb(13, 13, 13);
+  color: rgb(248, 232, 4);
 }
 
 a {
@@ -20,7 +23,7 @@ a:active {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 2px solid black;
-  background-color: white;
+  background-color: rgb(168, 231, 20);
   color: black;
   font-size: 16px;
   cursor: pointer;
@@ -45,16 +48,38 @@ input {
 }
 
 #display_card {
-  padding: 3px;
+  padding: 10px;
   width: 100%;
-  border: 2px solid black;
+  border: 5px solid rgb(62, 225, 41);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+#display_card::-webkit-scrollbar-thumb {
+  background: rgb(248, 232, 4);
+  border-radius: 10px;
+}
+
+#display_card::-webkit-scrollbar {
+  width: 10px;
+}
+
+.recent {
+  margin-left: 5vw;
+}
+
+div#display_card {
+  background-color: green;
+  width: 350px;
+  height: 300px;
+  overflow: auto;
+}
+
 .card:nth-child(even) {
-  background-color: #ddd;
+  background-color: rgb(202, 211, 79);
+  box-shadow: yellow;
+  border: 2px solid rgb(62, 225, 41);
 }
 
 #card1 {
@@ -69,10 +94,6 @@ input {
   box-shadow: 0.2rem 0.2rem black;
 }
 
-.card p {
-  margin: 5px;
-}
-
 hr {
   width: 100px;
   color: black;
@@ -81,7 +102,7 @@ hr {
 
 .refresh {
   border: 2px solid black;
-  background-color: white;
+  background-color: rgb(168, 231, 20);
   color: black;
   font-weight: bold;
   font-size: 14px;
@@ -93,7 +114,6 @@ hr {
 
 #title,
 #author {
-  border: 2px solid black;
   background-color: white;
   color: black;
   font-weight: bold;
@@ -102,11 +122,17 @@ hr {
   justify-content: center;
   align-items: center;
   width: 300px;
+  border: 2px solid rgb(62, 225, 41);
 }
 
 #title::placeholder,
 #author::placeholder {
-  color: black;
+  color: rgb(56, 56, 53);
+}
+
+.sectionList h2 {
+  text-shadow: 5px 5px 5px rgb(13, 13, 13);
+  color: rgb(248, 232, 4);
 }
 
 section {
@@ -121,6 +147,14 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 5px solid rgb(62, 225, 41);
+  height: 300px;
+  margin-top: 7vw;
+}
+
+.newBook h2 {
+  text-shadow: 5px 5px 5px rgb(13, 13, 13);
+  color: rgb(248, 232, 4);
 }
 
 .form {
